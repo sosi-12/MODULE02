@@ -1,0 +1,9 @@
+[
+  { "id": 1, "description": "Salary", "category": "Income", "type": "income", "amount": 18000, "date": "2026-08-01" },
+  { "id": 2, "description": "Injera & wet", "category": "Food", "type": "expense", "amount": 350, "date": "2026-08-02" },
+  { "id": 3, "description": "taxi to work", "category": "Transport", "type": "expense", "amount": 120, "date": "2026-08-03" },
+  { "id": 4, "description": "Freelance design gig", "category": "Income", "type": "income", "amount": 4200, "date": "2026-08-05" },
+  { "id": 5, "description": "Mobile data bundle", "category": "Utilities", "type": "expense", "amount": 500, "date": "2026-08-06" },
+  { "id": 6, "description": "Coffee with a friend", "category": "Food", "type": "expense", "amount": 90, "date": "2026-08-07" },
+  { "id": 7, "description": "House rent", "category": "Housing", "type": "expense", "amount": 6000, "date": "2026-08-08" }
+]

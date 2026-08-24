@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Birr Budget — Track your money</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">ብር</span>
+      <h1>Birr Budget</h1>
+    </div>
+    <input
+      id="search"
+      type="text"
+      placeholder="Search transactions…"
+      aria-label="Search transactions"
+    />
+  </header>
+
+  <main>
+    <section id="transactions" aria-label="Transactions">
+      <div class="filters" id="filters">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="income">Income</button>
+        <button class="filter-chip" data-filter="expense">Expense</button>
+      </div>
+      <ul id="txn-list" class="txn-list">
+        <li class="empty-state">Loading transactions…</li>
+      </ul>
+    </section>
+
+    <aside id="panel" aria-label="Summary and add transaction">
+      <div class="summary" id="summary">
+        <div class="summary-row">
+          <span>Balance</span>
+          <strong id="balance">0 ETB</strong>
+        </div>
+        <div class="summary-sub">
+          <span class="in">Income <strong id="total-income">0</strong></span>
+          <span class="out">Expense <strong id="total-expense">0</strong></span>
+        </div>
+      </div>
+
+      <form id="txn-form" class="txn-form" novalidate>
+        <h2>Add transaction</h2>
+
+        <label for="description">Description</label>
+        <input id="description" name="description" type="text" placeholder="e.g. Taxi to Bole" required />
+        <p class="error" id="err-description" hidden>Please enter a description.</p>
+
+        <label for="amount">Amount (ETB)</label>
+        <input id="amount" name="amount" type="number" min="1" step="0.01" placeholder="e.g. 250" required />
+        <p class="error" id="err-amount" hidden>Enter an amount greater than 0.</p>
+
+        <label for="category">Category</label>
+        <input id="category" name="category" type="text" placeholder="e.g. Food, Transport, Salary" required />
+        <p class="error" id="err-category" hidden>Please enter a category.</p>
+
+        <fieldset class="type-fieldset">
+          <legend>Type</legend>
+          <label class="radio">
+            <input type="radio" name="type" value="income" />
+            Income
+          </label>
+          <label class="radio">
+            <input type="radio" name="type" value="expense" checked />
+            Expense
+          </label>
+        </fieldset>
+
+        <button type="submit" class="btn-add">Add transaction</button>
+      </form>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>Addis Ababa · Birr Budget · your money, in one place</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
