@@ -1,0 +1,17 @@
+Expected Behavior
+
+1. Submission Control:
+Submitting the form does not trigger a page reload.
+
+2. Validation:
+Rejects names shorter than two characters.
+Rejects phone numbers that do not match the Ethiopian mobile pattern (09... or +2519...).
+
+3. Feedback:
+Displays the first validation error clearly in the designated error area using safe text methods.
+
+4. Persistence:
+Successfully validated data is saved into localStorage as a JSON string.
+
+5. Restoration:
+On page refresh, the app correctly reads the storage and displays the current count of signed-up users.
