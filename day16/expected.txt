@@ -1,0 +1,10 @@
+1. "480" + 20          -> 48020 | typeof: string
+2. "480" - 20          -> 460 | typeof: number
+3. Number("480") + 20  -> 500 | typeof: number
+4. Number("abc")       -> NaN | typeof: number
+5. 480 == "480"        -> true | typeof: boolean
+6. 480 === "480"       -> false | typeof: boolean
+7. Boolean(0)          -> false | typeof: boolean
+8. Boolean("Addis")    -> true | typeof: boolean
+9. null == undefined   -> true | typeof: boolean
+10. null === undefined -> false | typeof: boolean
